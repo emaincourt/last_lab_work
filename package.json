@@ -1,0 +1,29 @@
+{
+  "name": "last_lab_work",
+  "version": "1.0.0",
+  "description": "Last lab work for asynchronous server class",
+  "main": "index.js",
+  "scripts": {
+    "start": "./bin/start",
+    "test": "./bin/test test/*",
+    "compile": "./bin/compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gregoirejh/last_lab_work.git"
+  },
+  "author": "Gregoire JorantHouze & Elliot Maincourt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gregoirejh/last_lab_work/issues"
+  },
+  "homepage": "https://github.com/gregoirejh/last_lab_work#readme",
+  "dependencies": {
+    "coffee-script": "^1.12.7",
+    "mocha": "^4.0.1",
+    "pug": "^2.0.0-rc.4",
+    "pug-cli": "^1.0.0-alpha6",
+    "should": "^13.1.2",
+    "stylus": "^0.54.5"
+  }
+}
