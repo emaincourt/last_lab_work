@@ -34,6 +34,10 @@ module.exports =
         renderResource "index.pug", "html", res
       when "page1"
         renderResource "page1.pug", "html", res
+      when "page2"
+        renderResource "page2.pug", "html", res
+      when "page3"
+        renderResource "page3.pug", "html", res
       when "public"
         renderResource filename, filetype, res
       else 
