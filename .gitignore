@@ -57,3 +57,8 @@ typings/
 # dotenv environment variables file
 .env
 
+# Built files
+lib
+public/html
+public/css
+
