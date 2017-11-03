@@ -1,3 +1,16 @@
+@font-face
+  font-family: "Milkshake"
+  src: url("/fonts/Milkshake.ttf") format("ttf")
+
+@keyframes rotate
+  from { transform: rotate(0deg) }
+  to { transform: rotate(360deg) }
+
+vendor(prop, args)
+    -webkit-{prop} args
+    -moz-{prop} args
+    {prop} args
+
 body, html
     margin 0
     padding 0
@@ -73,9 +86,7 @@ nav
         padding 10px
         border-radius 5px
         font-size 0.7rem
-        -webkit-box-shadow 2px 2px 3px 0px rgba(41,47,51,1)
-        -moz-box-shadow 2px 2px 5px 0px rgba(41,47,51,1)
-        box-shadow 2px 2px 5px 0px rgba(41,47,51,1)
+        vendor('box-shadow', 2px 2px 3px 0px rgba(41,47,51,1))
 
 h2
     font-family 'Aller Display'
@@ -91,9 +102,7 @@ h2
     padding 50px
     margin auto auto 100px auto
     background-color RGBA(52, 49, 76, 1.00)
-    -webkit-box-shadow 2px 2px 5px 0px rgba(41,47,51,1)
-    -moz-box-shadow 2px 2px 5px 0px rgba(41,47,51,1)
-    box-shadow 2px 2px 5px 0px rgba(41,47,51,1)
+    vendor('box-shadow', 2px 2px 3px 0px rgba(41,47,51,1))
     border-radius 15px
     & > form
         flex-grow 4
