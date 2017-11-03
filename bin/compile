@@ -3,18 +3,21 @@
 set -e # Set bash flag to interrupt if any command fails
 
 compileCoffee() {
-  echo "Compiling coffee files"
+  echo "compile:coffee:start"
   node_modules/.bin/coffee --compile --output lib src
+  echo "compile:coffee:done"
 }
 
 compilePug() {
-  echo "Compile pug files"
-  node_modules/.bin/pug views --out public/html --pretty
+  echo "compile:pug:start"
+  node_modules/.bin/pug public/pug --out public/html --pretty
+  echo "compile:pug:done"
 }
 
 compileStylus() {
-  echo "Compiling stylus files"
-  echo "nothing to do"
+  echo "compile:stylus:start"
+  stylus --compress < public/stylus/main.styl > public/css/main.css
+  echo "compile:stylus:done"
 }
 
 main() {  
