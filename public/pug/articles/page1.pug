@@ -2,12 +2,12 @@ doctype html
 html
 	head
 		title TP01
-		link(rel="stylesheet", href="../css/main.css")
+		link(rel="stylesheet", href="public/css/main.css")
 	body
-		include ./header.pug
+		include ../header.pug
 		main
 			section.article-container
-				//img.cover(src="../public/img/background.jpg", alt="cover")
+				img(class="cover", src="public/assets/background.jpg", alt="cover")
 				article
 					h2
 						| Sentiment Of Callousness is out in November, with the remix EP following in early 2018.
@@ -22,11 +22,11 @@ html
 						br
 						br
 						|             Sentiment Of Callousness 
-						ul
-							li Alog
-							li Apath
-							li Abul
-							li Anhedon
-						|             SNTS Records will release Sentiment Of Callousness on November 3rd, 2017 and Sentiment Of Callousness Remixed in early 2018.
+					ul
+						li Alog
+						li Apath
+						li Abul
+						li Anhedon
+					|             SNTS Records will release Sentiment Of Callousness on November 3rd, 2017 and Sentiment Of Callousness Remixed in early 2018.
 		footer
 			p ECE PARIS
