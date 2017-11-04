@@ -1,8 +1,11 @@
-## Asynchronous Server Technologies
+[![Build Status](https://travis-ci.org/emaincourt/last_lab_work.svg?branch=master)](https://travis-ci.org/emaincourt/last_lab_work)
+[![codecov](https://codecov.io/gh/emaincourt/last_lab_work/branch/master/graph/badge.svg)](https://codecov.io/gh/emaincourt/last_lab_work)
+
+# Asynchronous Server Technologies
 
 > Final appointment
 
-### Target
+## :telescope: Target
 
 * Be a correct NodeJS project (package.json) (4 pts)
 * Apply best practices as seen in class (readme.md, scripts, ...) (2 pts)
@@ -14,7 +17,7 @@
 * Have some basic unit tests to validate your routing (for example: expect 200 HTTP code if file exists, 404 if not, ...) (1 pt)
 * Use travis-ci to run unit tests (1 pt)
 
-### What's been done ?
+## :pushpin: What's been done ?
 
 We have tried to apply as much as be could the best practices as seen in class.
 
@@ -25,25 +28,29 @@ About the organization :
 * `Mocha` and `should` have made a great work. We've added `Sinon` to them for being able to `stub`, `spy` and `mock` our modules.
 * Code coverage and build status badges have also been added to our repository
 
-### Getting started
+## :roller_coaster: Getting started
 
 First of all, `npm i` or `yarn` at the root of the project for getting the packages.
 
 Then you need to compile all the files of the project :
 ```bash
-yarn compile stylus && yarn compile coffee & yarn compile pug
-// or
-npm run compile stylus && npm run compile coffee & npm run compile pug
+yarn compile
+# or
+npm run compile
 ```
 
 You can now start the server :
 ```bash
 yarn start
-// or
+# or
 npm start
 ```
 
-If you want to run the tests, you can then :
-* Run all : `yarn test`
-* Only run the `mocha` tests : `yarn test:mocha`
-* Only run the `jest` tests : `yarn test:jest`
+If you want to run the tests :
+```bash
+yarn test
+# or
+npm test
+```
+
+Made with ❤️ | Thanks for reading

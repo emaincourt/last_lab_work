@@ -6,7 +6,8 @@
   "scripts": {
     "start": "./bin/start",
     "test": "./bin/test test/*",
-    "compile": "./bin/compile"
+    "compile": "./bin/compile",
+    "test:coverage": "nyc --reporter=lcov --reporter=text-lcov npm test"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
   "dependencies": {
     "coffee-script": "^1.12.7",
     "mocha": "^4.0.1",
+    "nyc": "^11.3.0",
     "pug": "^2.0.0-rc.4",
     "pug-cli": "^1.0.0-alpha6",
     "should": "^13.1.2",
