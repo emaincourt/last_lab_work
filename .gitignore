@@ -59,6 +59,6 @@ typings/
 
 # Built files
 lib
-public/html
-public/css
+html
+css
 

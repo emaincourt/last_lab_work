@@ -11,10 +11,7 @@ renderPug = (filename) ->
     pug.renderFile "public/pug/#{filename}",
       pretty: true,
       (err, html) ->
-        if err
-          reject(err)
-        else
-          resolve(html)
+        err ? reject err : resolve html
 
 module.exports =
   render: (filename, type) ->

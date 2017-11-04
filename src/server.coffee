@@ -1,26 +1,18 @@
 fs = require 'fs'
 url = require 'url'
-pug = require 'pug'
 renderer = require './renderer'
 
 renderResource = (filename, type, res, callback) ->
-  try
-    if fs.existsSync "public/#{type}/#{filename}"
-      renderer.render(filename, type).then (content) ->
-        res.writeHead 200
-        res.write content
-        res.end()
-    else
-      res.writeHead 404,
-        'Content-Type': "text/#{type}"
-      res.write 'File not found'
+  if fs.existsSync "public/#{type}/#{filename}"
+    content = renderer.render(filename, type).then (content) ->
+      res.writeHead 200
+      res.write content
       res.end()
-  catch error
-    console.log error
-    res.writeHead 502,
-        'Content-Type': "text/plain"
-      res.write 'Unable to forward the file'
-      res.end()
+  else
+    res.writeHead 404,
+      'Content-Type': "text/#{type}"
+    res.write 'File not found'
+    res.end()
     
 
 module.exports = 
@@ -29,7 +21,7 @@ module.exports =
       url = url.parse req.url
       [ _, directory, filetype, filename ] = url.pathname.split "/"
       directory = "/" if directory == ""
-      
+
       switch directory
         when "/"
           renderResource "index.pug", "pug", res
@@ -48,7 +40,7 @@ module.exports =
     catch error
       res.writeHead 500,
         'Content-Type': 'text/plain'
-      res.end "Too bad we're down"
+      res.end "Oops"
     
   port: "8888"
   address: "127.0.0.1"
