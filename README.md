@@ -2,6 +2,7 @@
 [![codecov](https://codecov.io/gh/emaincourt/last_lab_work/branch/master/graph/badge.svg)](https://codecov.io/gh/emaincourt/last_lab_work)
 
 # Asynchronous Server Technologies
+NodeJS version: 8.9.0
 
 > Final appointment
 
